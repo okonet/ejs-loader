@@ -16,7 +16,7 @@ If you are looking for the loader which uses [EJS templating engine](https://git
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
 
 ``` javascript
-var template = require("ejs!./file.ejs");
+var template = require("ejs-loader!./file.ejs");
 // => returns the template function compiled with underscore (lodash) templating engine.
 
 // And then use it somewhere in your code
@@ -139,8 +139,8 @@ Lodash template function does not provide `include` method of [ejs module](http:
 
 **index.js:**
 
-    var mainTemplate = require('ejs!./main.ejs');
-    var hyperlinkTemplate = require('ejs!./hyperlink.ejs');
+    var mainTemplate = require('ejs-loader!./main.ejs');
+    var hyperlinkTemplate = require('ejs-loader!./hyperlink.ejs');
     var renderedHtml = mainTemplate({ hyperlink: hyperlinkTemplate });
 
 **main.ejs:**
